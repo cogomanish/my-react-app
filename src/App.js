@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import react,{useState} from 'react';
+import Project1 from './Project/Project1'
+import ApiCall from './Project/ApiCall';
 
-function App() {
+const App =() => {
+  const [num, setNum] =useState(0);
+  const handclick =() =>{
+    setNum(num+1);
+    
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+  <Project1/>
+  {/* <ApiCall/> */}
+
+ 
+  </div>
+ 
   );
 }
 
